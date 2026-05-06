@@ -3,371 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TECH.OFFICIEL</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Tech Officiel</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-background:#03070d;
-font-family:'Rajdhani',sans-serif;
-overflow-x:hidden;
+margin:0;
+background:#050816;
+font-family:Arial;
 color:white;
-}
-
-/* BACKGROUND */
-
-.bg{
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at top left,#00aaff22,transparent 30%),
-radial-gradient(circle at bottom right,#7b2fff22,transparent 30%),
-#03070d;
-z-index:-1;
-}
-
-/* NAVBAR */
-
-nav{
-position:fixed;
-top:0;
-left:0;
-right:0;
-height:70px;
 display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 20px;
-background:#050b13dd;
-backdrop-filter:blur(20px);
-border-bottom:1px solid #00aaff33;
-z-index:999;
-}
-
-.logo{
-font-family:'Orbitron',sans-serif;
-font-weight:900;
-font-size:22px;
-color:white;
-}
-
-.logo span{
-color:#00aaff;
-}
-
-.navbtn{
-padding:12px 22px;
-border-radius:12px;
-background:linear-gradient(135deg,#00aaff,#7b2fff);
-text-decoration:none;
-color:white;
-font-weight:700;
-box-shadow:0 0 25px #00aaff66;
-}
-
-/* HERO */
-
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
 justify-content:center;
-padding:120px 20px 60px;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.box{
 text-align:center;
-}
-
-.hero-content{
-max-width:900px;
-}
-
-.badge{
-display:inline-block;
-padding:10px 20px;
-border:1px solid #00aaff55;
-border-radius:999px;
-background:#00aaff11;
-margin-bottom:20px;
-color:#00aaff;
-font-weight:700;
-}
-
-h1{
-font-family:'Orbitron',sans-serif;
-font-size:clamp(40px,8vw,90px);
-line-height:1;
-margin-bottom:25px;
-}
-
-h1 span{
-background:linear-gradient(135deg,#00aaff,#00fff7,#7b2fff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.sub{
-font-size:22px;
-opacity:.8;
-margin-bottom:40px;
-}
-
-.buttons{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:18px 35px;
-border-radius:14px;
-text-decoration:none;
-font-weight:700;
-font-size:18px;
-transition:.3s;
-}
-
-.btn-main{
-background:linear-gradient(135deg,#00aaff,#0066ff);
-color:white;
-box-shadow:0 0 40px #00aaff66;
-}
-
-.btn-main:hover{
-transform:translateY(-5px);
-}
-
-.btn-second{
-border:1px solid #00aaff55;
-background:#00aaff11;
-color:#00aaff;
-}
-
-.btn-second:hover{
-background:#00aaff22;
-}
-
-/* STATS */
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-padding:60px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.card{
-background:#ffffff08;
-border:1px solid #ffffff10;
-padding:30px;
-border-radius:20px;
-text-align:center;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:#00aaff55;
-box-shadow:0 0 40px #00aaff22;
-}
-
-.card h2{
-font-size:40px;
-color:#00aaff;
-margin-bottom:10px;
-font-family:'Orbitron',sans-serif;
-}
-
-.card p{
-opacity:.7;
-}
-
-/* SERVICES */
-
-.services{
-padding:80px 20px;
-max-width:1300px;
-margin:auto;
-}
-
-.title{
-text-align:center;
-margin-bottom:60px;
-}
-
-.title h3{
-font-size:50px;
-font-family:'Orbitron',sans-serif;
-}
-
-.title h3 span{
-color:#00aaff;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.service{
-background:#ffffff08;
-border:1px solid #ffffff10;
-padding:35px;
-border-radius:24px;
-transition:.4s;
-text-align:center;
-}
-
-.service:hover{
-transform:translateY(-10px);
-border-color:#00aaff55;
-box-shadow:0 0 50px #00aaff22;
-}
-
-.service .icon{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.service h4{
-font-size:28px;
-margin-bottom:15px;
-}
-
-.service p{
-opacity:.75;
-margin-bottom:25px;
-}
-
-.service a{
-display:inline-block;
-padding:12px 24px;
-border-radius:12px;
-background:#00aaff22;
-border:1px solid #00aaff55;
-text-decoration:none;
-color:#00aaff;
-font-weight:700;
-}
-
-/* SOCIALS */
-
-.socials{
-padding:100px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.social-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.social{
 padding:40px;
-border-radius:25px;
-text-align:center;
-transition:.4s;
-}
-
-.telegram{
-background:#0088cc11;
-border:1px solid #0088cc55;
-}
-
-.tiktok{
-background:#ffffff08;
-border:1px solid #ffffff22;
-}
-
-.snap{
-background:#ffee0011;
-border:1px solid #ffee0055;
-}
-
-.social:hover{
-transform:translateY(-10px);
-}
-
-.social .emoji{
-font-size:70px;
-margin-bottom:20px;
-}
-
-.social h5{
-font-size:35px;
-margin-bottom:15px;
-font-family:'Orbitron',sans-serif;
-}
-
-.social p{
-opacity:.75;
-margin-bottom:25px;
-}
-
-.social a{
-display:inline-block;
-padding:14px 28px;
-border-radius:14px;
-text-decoration:none;
-font-weight:700;
-color:white;
-}
-
-.telegram a{
-background:#0088cc;
-}
-
-.tiktok a{
-background:linear-gradient(135deg,#ff0050,#00f2ea);
-}
-
-.snap a{
-background:#ffee00;
-color:black;
-}
-
-/* FOOTER */
-
-footer{
-padding:40px 20px;
-text-align:center;
-border-top:1px solid #ffffff10;
-margin-top:80px;
-opacity:.6;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:700px){
-
-.buttons{
-flex-direction:column;
-}
-
-.btn{
-width:100%;
+border-radius:20px;
+background:#0f172a;
+border:1px solid #00aaff55;
+box-shadow:0 0 40px #00aaff33;
 }
 
 h1{
 font-size:50px;
+margin:0;
+color:#00aaff;
 }
 
-.title h3{
-font-size:38px;
+p{
+opacity:.8;
+margin-top:15px;
+font-size:20px;
 }
 
+a{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+border-radius:12px;
+background:linear-gradient(135deg,#00aaff,#0066ff);
+text-decoration:none;
+color:white;
+font-weight:bold;
 }
 
 </style>
@@ -375,199 +56,19 @@ font-size:38px;
 
 <body>
 
-<div class="bg"></div>
+<div class="box">
 
-<nav>
-<div class="logo">TECH<span>.OFFICIEL</span></div>
+<h1>TECH.OFFICIEL</h1>
 
-<a href="https://t.me/TONTELEGRAM" class="navbtn">
-Commander
-</a>
-</nav>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="badge">
-⚡ SERVICE PREMIUM GARANTI
-</div>
-
-<h1>
-TOUTES LES <br>
-<span>SOLUTIONS PREMIUM</span><br>
-RÉUNIES
-</h1>
-
-<p class="sub">
-Fast Food • Streaming • Musique • Cartes • Cagnottes
-</p>
-
-<div class="buttons">
-
-<a href="https://t.me/TONTELEGRAM" class="btn btn-main">
-🛒 COMMANDER
-</a>
-
-<a href="https://tiktok.com/@TONCOMPTE" class="btn btn-second">
-🎵 TIKTOK
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="stats">
-
-<div class="card">
-<h2>12K+</h2>
-<p>Clients satisfaits</p>
-</div>
-
-<div class="card">
-<h2>50K+</h2>
-<p>Commandes réalisées</p>
-</div>
-
-<div class="card">
-<h2>24/7</h2>
-<p>Support disponible</p>
-</div>
-
-<div class="card">
-<h2>100%</h2>
-<p>Paiement sécurisé</p>
-</div>
-
-</section>
-
-<section class="services">
-
-<div class="title">
-<h3>Nos <span>Services</span></h3>
-</div>
-
-<div class="grid">
-
-<div class="service">
-<div class="icon">🍔</div>
-<h4>FAST FOOD</h4>
 <p>
-McDonald's, KFC, Burger King, O’Tacos et bien plus.
+SITE EN LIGNE ✅
 </p>
 
 <a href="https://t.me/TONTELEGRAM">
-Voir
-</a>
-</div>
-
-<div class="service">
-<div class="icon">🎬</div>
-<h4>STREAMING</h4>
-<p>
-Netflix, Disney+, Prime Video, Canal+, Crunchyroll.
-</p>
-
-<a href="https://t.me/TONTELEGRAM">
-Voir
-</a>
-</div>
-
-<div class="service">
-<div class="icon">🎵</div>
-<h4>MUSIQUE</h4>
-<p>
-Spotify, Deezer, YouTube Premium et Apple Music.
-</p>
-
-<a href="https://t.me/TONTELEGRAM">
-Voir
-</a>
-</div>
-
-<div class="service">
-<div class="icon">💳</div>
-<h4>CARTES</h4>
-<p>
-PSN, Xbox, iTunes, Google Play, cartes cadeaux.
-</p>
-
-<a href="https://t.me/TONTELEGRAM">
-Voir
-</a>
-</div>
-
-</div>
-
-</section>
-
-<section class="socials">
-
-<div class="title">
-<h3>Notre <span>Communauté</span></h3>
-</div>
-
-<div class="social-grid">
-
-<div class="social telegram">
-
-<div class="emoji">✈️</div>
-
-<h5>TELEGRAM</h5>
-
-<p>
-Rejoins notre canal officiel pour commander rapidement.
-</p>
-
-<a href="https://t.me/TONTELEGRAM">
-REJOINDRE
+COMMANDER
 </a>
 
 </div>
-
-<div class="social tiktok">
-
-<div class="emoji">🎵</div>
-
-<h5>TIKTOK</h5>
-
-<p>
-Découvre nos vidéos, retours clients et nouveautés.
-</p>
-
-<a href="https://tiktok.com/@TONCOMPTE">
-SUIVRE
-</a>
-
-</div>
-
-<div class="social snap">
-
-<div class="emoji">👻</div>
-
-<h5>SNAPCHAT</h5>
-
-<p>
-Ajoute-nous pour voir les offres exclusives et promos.
-</p>
-
-<a href="https://snapchat.com/add/TONSNAP">
-AJOUTER
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2024 TECH.OFFICIEL — Tous droits réservés
-
-</footer>
 
 </body>
 </html>
