@@ -1479,7 +1479,11 @@ footer {
     <div class="intro-tagline-1">L'Art du Parfum Oriental</div>
     <div class="intro-tagline-2">Une expérience olfactive unique</div>
     <div class="intro-divider"></div>
-    <button class="btn-entrer" onclick="enterSite()">
+    <button class="btn-entrer"
+onclick="
+document.getElementById('intro').style.display='none';
+document.body.classList.remove('locked');
+">
       <span>✦ &nbsp; Entrer dans l'univers &nbsp; ✦</span>
     </button>
   </div>
